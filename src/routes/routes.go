@@ -1,8 +1,12 @@
 package routes
 
 import (
+    "os"
     "fmt"
+    "runtime"
     "net/http"
+    "html/template"
+    _ "github.com/go-sql-driver/mysql"
 )
 
 func main(){
@@ -22,7 +26,27 @@ func RoutesInit(){
 }
 
 func mainRoute(w http.ResponseWriter, r *http.Request){
-    fmt.Fprint(w, "ciao1");
+	Cwd, _ := os.Getwd();
+    Os := runtime.GOOS;
+    
+    // html template
+    switch Os {
+        case "windows":
+            template, _ := template.ParseFiles(Cwd + "\\static\\pages\\news.html");
+            template.Execute(w, "");
+            break;
+        case "darwin":
+            template, _ := template.ParseFiles(Cwd + "/static/pages/news.html");
+            template.Execute(w, "");
+            break;
+        case "linux":
+            template, _ := template.ParseFiles(Cwd + "/static/pages/news.html");
+            template.Execute(w, "");
+            break;
+        default:
+            template, _ := template.ParseFiles(Cwd + "/static/pages/news.html");
+            template.Execute(w, "");
+    }
 }
 
 func authRoute(w http.ResponseWriter, r *http.Request){

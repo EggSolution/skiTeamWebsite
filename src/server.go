@@ -10,5 +10,5 @@ import (
 func main(){
     routes.RoutesInit();
 
-    log.Fatal(http.ListenAndServe(":8080", nil));
+    log.Fatal(http.ListenAndServe(":4040", nil));
 }
