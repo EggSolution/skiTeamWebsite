@@ -42,17 +42,21 @@ body {
     justify-content: center;
 }
 .news .main .leftSection {
-    height: 500px;
+    height: auto;
     width: calc(50% - 50px / 2);
-    background: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .news .main .centralSection {
-    height: 500px;
+    height: auto;
     width: 50px;
     background: red;
 }
 .news .main .rightSection {
-    height: 500px;
+    height: auto;
     width: calc(50% - 50px / 2);
-    background: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
