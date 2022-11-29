@@ -11,6 +11,9 @@ body {
     height: 100vh;
     background-color: rgb(126, 168, 231);
 }
+
+/*TITOLO*/
+
 .chiSiamo .titolo {
     height: auto;
     width: 100%;
@@ -30,46 +33,115 @@ body {
     background: #051C31;
     border-radius: 33px;
 }
-.main{
+
+
+.chiSiamo .main{
     width: 100%;
-    min-height: 85vh;
-    background-color: red;
+    height: 85vh;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
 }
-.main .tessere{
+/*TESSERE*/
+.chiSiamo .main .tessere{
     width: 100%;
-    height: 460px;
-    background-color: blue;
+    height: 60%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-.main .tessere .tDirettivo{
+
+/*TESSERA DIRETTIVO*/
+.chiSiamo .main .tessere .tDirettivo{
     height: 100%;
-    width: 460px;
+    width: 25%;
     border-radius: 31px;
     background-color: black;
 }
-.main .tessere .tDirettivo .img{
+.chiSiamo .main .tessere .tDirettivo .divImg{
     width: 100%;
-    height: 90%;
-    background-color: red;
+    height: 85%;
     border-radius: 31px 31px 0px 0px;
+    background-image: url("/static/media/images/chiSiamo/direttivo.jpg");
+    background-position: center;
+    background-size: cover;
 }
-.main .tessere .tDirettivo .nomeTessere{
+.chiSiamo .main .tessere .tDirettivo .nomeTessere{
     width: 100%;
-    height: 10%;
+    height: 15%;
     background-color: #165976;
     border-radius: 0px 0px 31px 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.main .tessere .tAllenatori{
+.chiSiamo .main .tessere .tDirettivo .nomeTessere a{ 
+    font-family: 'Roboto', sans-serif;
+    font-size: 200%;
+    color: #e7e7e7;
+}
+
+/*TESSERA ALLENATORI*/
+.chiSiamo .main .tessere .tAllenatori{
     height: 100%;
-    width: 460px;
+    width: 25%;
     border-radius: 31px;
     background-color: black;
 }
-.main .tessere .tRegolamento{
+.chiSiamo .main .tessere .tAllenatori .divImg{
+    width: 100%;
+    height: 85%;
+    border-radius: 31px 31px 0px 0px;
+    background-image: url("/static/media/images/chiSiamo/Allenatori.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.chiSiamo .main .tessere .tAllenatori .nomeTessere{
+    width: 100%;
+    height: 15%;
+    background-color: #165976;
+    border-radius: 0px 0px 31px 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chiSiamo .main .tessere .tAllenatori .nomeTessere a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 200%;
+    color: #e7e7e7;
+}
+
+/*TESSERA REGOLAMENTO*/
+.chiSiamo .main .tessere .tRegolamento{
     height: 100%;
-    width: 460px;
+    width: 25%;
     border-radius: 31px;
     background-color: black;
+}
+.chiSiamo .main .tessere .tRegolamento .divImg{
+    width: 100%;
+    height: 85%;
+    border-radius: 31px 31px 0px 0px;
+    background-image: url("/static/media/images/chiSiamo/regolamento.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.chiSiamo .main .tessere .tRegolamento .nomeTessere{
+    width: 100%;
+    height: 15%;
+    background-color: #165976;
+    border-radius: 0px 0px 31px 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chiSiamo .main .tessere .tRegolamento .nomeTessere a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 200%;
+    color: #e7e7e7;
+}
+.chiSiamo .ChiSiamoScritte{
+    width: 100%;
+    height: 40%;
+    background-color: red;
 }
