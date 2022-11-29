@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    width: 100%;
+}
+.chiSiamo{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(126, 168, 231);
+}
+.chiSiamo .titolo {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 55px;
+}
+.chiSiamo .titolo a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 300%;
+    color: #051C31;
+}
+.chiSiamo .titolo div {
+    height: 11px;
+    width: 56px;
+    background: #051C31;
+    border-radius: 33px;
+}
+.main{
+    width: 100%;
+    min-height: 85vh;
+    background-color: red;
+}
+.main .tessere{
+    width: 100%;
+    height: 460px;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.main .tessere .tDirettivo{
+    height: 100%;
+    width: 460px;
+    border-radius: 31px;
+    background-color: black;
+}
+.main .tessere .tDirettivo .img{
+    width: 100%;
+    height: 90%;
+    background-color: red;
+    border-radius: 31px 31px 0px 0px;
+}
+.main .tessere .tDirettivo .nomeTessere{
+    width: 100%;
+    height: 10%;
+    background-color: #165976;
+    border-radius: 0px 0px 31px 31px;
+}
+.main .tessere .tAllenatori{
+    height: 100%;
+    width: 460px;
+    border-radius: 31px;
+    background-color: black;
+}
+.main .tessere .tRegolamento{
+    height: 100%;
+    width: 460px;
+    border-radius: 31px;
+    background-color: black;
+}

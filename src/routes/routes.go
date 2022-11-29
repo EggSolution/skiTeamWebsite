@@ -24,6 +24,7 @@ func RoutesInit() {
 	http.HandleFunc("/reg", registerRoute)
 	http.HandleFunc("/newseeg", newsregisterRoute)
 	http.HandleFunc("/admin", adminRoute)
+	http.HandleFunc("/chi", routeChiSiamo)
 }
 
 func mainRoute(w http.ResponseWriter, r *http.Request) {
