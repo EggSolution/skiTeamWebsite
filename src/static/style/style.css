@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
+:root {
+    --titleBottomMargin: 55px;
+}
 * {
     padding: 0;
     margin: 0;
@@ -21,7 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 55px;
+    margin-bottom: var(--titleBottomMargin);
 }
 .chiSiamo .titolo a {
     font-family: 'Roboto', sans-serif;
@@ -42,7 +45,7 @@ body {
 }
 .chiSiamo .main .tessere{
     width: 100%;
-    height: 400px; /* REVISIONARE CON MAGLIO */
+    height: 420px; /* REVISIONARE CON MAGLIO */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -218,7 +221,123 @@ body {
 /**/
 
 /* ATTIVITA SECTION */
+.attivita {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+.attivita .titolo {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--titleBottomMargin);
+}
+.attivita .titolo a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 300%;
+    color: #051C31;
+}
+.attivita .titolo div {
+    height: 11px;
+    width: 56px;
+    background: #051C31;
+    border-radius: 33px;
+}
+.attivita .main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.attivita .sez,
+.attivita .sez2,
+.attivita .sez3 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+    width: 70%;
+    height: 400px;
+}
+.attivita .main .sez .sx,
+.attivita .main .sez2 .sx,
+.attivita .main .sez3 .sx{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+}
+.attivita .main .sez .sx .content{
+    height: auto;
+    width: auto;
+}
+.attivita .main .sez .dx,
+.attivita .main .sez2 .dx,
+.attivita .main .sez3 .dx{
+    background-color: #000000;
+    height: 100%;
+    width: 50%;
+}
+.attivita .main .sez .sx .content .titoletto,
+.attivita .main .sez2 .sx .content .titoletto,
+.attivita .main .sez3 .sx .content .titoletto{
+    width: 100%;
+    height: auto;
 
+}
+.attivita .main .sez .sx .content .titoletto a,
+.attivita .main .sez2 .sx .content .titoletto a,
+.attivita .main .sez3 .sx .content .titoletto a{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    color: #051C31;
+
+}
+.attivita .main .sez .sx .content .testo,
+.attivita .main .sez2 .sx .content .testo,
+.attivita .main .sez3 .sx .content .testo{
+    margin-top:35px;
+    margin-bottom:65px;
+    width: 80%;
+    height: auto;
+}
+.attivita .main .sez .sx .content .testo a,
+.attivita .main .sez2 .sx .content .testo a,
+.attivita .main .sez3 .sx .content .testo a{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    color: #051C31;
+    text-align: left;
+
+}
+.attivita .main .sez .sx .content .button,
+.attivita .main .sez2 .sx .content .button,
+.attivita .main .sez3 .sx .content .button{
+    border-radius: 31px;
+    background-color: #165976;
+    width: 290px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.attivita .main .sez .sx .content .button a,
+.attivita .main .sez2 .sx .content .button a,
+.attivita .main .sez3 .sx .content .button a{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    color: #FFFFFF;
+}
 /**/
 
 /* NEWS SECTION */
@@ -235,6 +354,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: var(--titleBottomMargin);
 }
 .news .titolo a {
     font-family: 'Roboto', sans-serif;
@@ -253,7 +373,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 55px;
 }
 .news .main .leftSection {
     height: auto;
@@ -278,4 +397,13 @@ body {
     align-items: center;
     padding-right: 10%;
 }
+/**/
+
+/* FOOTER SECTION */
+.footer {
+    background: #6FA5BC;
+    display: flex;
+    flex-direction: column;
+}
+
 /**/
