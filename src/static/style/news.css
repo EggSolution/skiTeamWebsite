@@ -51,7 +51,9 @@ body {
 .news .main .centralSection {
     height: auto;
     width: 50px;
-    background: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .news .main .rightSection {
     height: auto;
