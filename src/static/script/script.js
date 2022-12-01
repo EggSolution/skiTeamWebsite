@@ -240,5 +240,33 @@ class NewsDiv {
 
 
 // FOOTER SECTION
+let messageDiv = document.querySelector(".footer .mainDiv .message");
+let footerButton = document.querySelector(".footer .mainDiv .message .button");
+let footerButtonText = footerButton.querySelector("a");
+let currentStatus;
 
+// default settings
+currentStatus = "map"
+footerButton.style.background = "#4C7384";
+footerButtonText.innerHTML = "Messaggi";
+messageDiv.style.transform = "translateX(calc(100% - 51px))";
 
+footerButton.addEventListener("click", () => {
+    console.log("ciao");
+    switch(currentStatus){
+        case "map":
+            // switch to message
+            currentStatus = "message"
+            footerButton.style.background = "#73C880";
+            footerButtonText.innerHTML = "Mappa";
+            messageDiv.style.transform = "translateX(0)";
+            break;
+        case "message":
+            // switch to map
+            currentStatus = "map"
+            footerButton.style.background = "#4C7384";
+            footerButtonText.innerHTML = "Messaggi";
+            messageDiv.style.transform = "translateX(calc(100% - 51px))";
+            break;
+    }
+})

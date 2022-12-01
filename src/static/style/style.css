@@ -63,7 +63,7 @@ body {
     width: 100%;
     height: 85%;
     border-radius: 31px 31px 0px 0px;
-    background-image: url("/static/media/images/chiSiamo/direttivo.jpg");
+    background-image: url("/static/media/images/direttivo.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -108,7 +108,7 @@ body {
     width: 100%;
     height: 85%;
     border-radius: 31px 31px 0px 0px;
-    background-image: url("/static/media/images/chiSiamo/Allenatori.jpg");
+    background-image: url("/static/media/images/Allenatori.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -153,7 +153,7 @@ body {
     width: 100%;
     height: 85%;
     border-radius: 31px 31px 0px 0px;
-    background-image: url("/static/media/images/chiSiamo/regolamento.jpg");
+    background-image: url("/static/media/images/regolamento.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -404,6 +404,126 @@ body {
     background: #6FA5BC;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 160px;
 }
-
+.footer .main {
+    height: 500px;
+    width: 65%;
+    position: absolute;
+    margin-top: -250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer .main a {
+    margin-top: 10px;
+    height: 30px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 120%;
+}
+.footer .main .mainDiv {
+    height: calc(100% - 40px);
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.footer .main .mainDiv .message {
+    transition: 1s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #4C7384;
+}
+.footer .main .mainDiv .message .button {
+    transition: 1s;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .main .mainDiv .message .button a {
+    transition: 1s;
+    transform: rotate(-90deg);
+    position: absolute;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 150%;
+}
+.footer .main .mainDiv .map {
+    height: 100%;
+    width: calc(100% - 50px);
+    position: absolute;
+    background: #BAE1C1;
+}
+.footer .info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 250px;
+    width: calc(100% - 9% - 9%);
+    padding-left: 9%;
+    padding-right: 9%;
+}
+.footer .info .left {
+    height: 260px;
+    width: 25%;
+}
+.footer .info .center {
+    height: 260px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.footer .info .center a {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 200%;
+}
+.footer .info .center div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer .info .center div a{
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 120%;
+}
+.footer .info .right {
+    height: 260px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+.footer .info .right a {
+    width: 100%;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 120%;
+}
+.footer .info .right div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.footer .info .right div a{
+    width: 100%;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 120%;
+}
 /**/
