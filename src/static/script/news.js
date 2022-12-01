@@ -1,19 +1,22 @@
+// NEWS SECTION
 let newsNumber = 0;
 
 class NewsDiv {
 
     constructor(title, description, imgPath){
         newsNumber++;
-        
+
         this.title = title;
         this.description = description;
         this.imgPath = imgPath;
-        this.newsDivMargin = 70;
-        this.newsDivHeight = 200;
-        this.newsDivWidth = 420;
-        this.newsDivImgWidth = 160;
-        this.newsDivTextTitleSize = 18;
-        this.newsDivTextDescriptionSize = 14;
+        this.newsDivMargin = 80;
+        this.newsDivHeight = 240;
+        this.newsDivWidth = 500;
+        this.newsDivImgWidth = 200;
+        this.newsDivTextTitleSize = 20;
+        this.newsDivTextDescriptionSize = 16;
+        this.newsDivTextGap = 14;
+        this.centralDotHeight = 26;
 
         if(newsNumber == 1){
             this.marginTop = 0;
@@ -25,9 +28,14 @@ class NewsDiv {
         this.marginTop += "px";
         
         if(newsNumber % 2 == 0){
-            this.side = "dx";
-        } else {
             this.side = "sx";
+        } else {
+            this.side = "dx";
+        }
+        if(newsNumber == 4){
+            this.lastShown = true;
+        } else {
+            this.lastShown = false;
         }
 
         this.newsDivMargin += "px";
@@ -36,6 +44,8 @@ class NewsDiv {
         this.newsDivImgWidth += "px";
         this.newsDivTextTitleSize += "px";
         this.newsDivTextDescriptionSize += "px";
+        this.newsDivTextGap += "px";
+        // centralDotHeight needed as integer below (not as a string)
     }
 
     insertInHTML(){
@@ -95,8 +105,10 @@ class NewsDiv {
             newsDivDXTextDescription.style.color = "#B7B7B7";
             newsDivDXTextDescription.style.fontFamily = "'Roboto', sans-serif";
             newsDivDXTextDescription.style.fontSize = this.newsDivTextDescriptionSize;
-            newsDivDXTextDescription.style.paddingTop = "10px";
+            newsDivDXTextDescription.style.paddingTop = this.newsDivTextGap;
             newsDivDXText.appendChild(newsDivDXTextDescription);
+        
+            this.#generateCentralLine(newsDivDXImg.offsetTop, newsDivDXImg.clientHeight);
         } else if(this.side == "sx"){
             // sx
             let newsDivSX = document.createElement("div");
@@ -154,18 +166,70 @@ class NewsDiv {
             newsDivSXTextDescription.style.color = "#B7B7B7";
             newsDivSXTextDescription.style.fontFamily = "'Roboto', sans-serif";
             newsDivSXTextDescription.style.fontSize = this.newsDivTextDescriptionSize;
-            newsDivSXTextDescription.style.paddingTop = "10px";
+            newsDivSXTextDescription.style.paddingTop = this.newsDivTextGap;
             newsDivSXText.appendChild(newsDivSXTextDescription);
+        
+            this.#generateCentralLine(newsDivSXImg.offsetTop, newsDivSXImg.clientHeight);
+        }
+    }
+
+    #generateCentralLine(arrowOffsetTop, arrowHeight){
+        let newsDivCentralPoint = arrowOffsetTop + arrowHeight / 2;
+        let relativePointOffsetTopValue = (newsDivCentralPoint - document.querySelector(".news .main .centralSection").offsetTop) - this.centralDotHeight / 2;
+        let relativePointOffsetTop = relativePointOffsetTopValue + "px";
+        let relativeBarOffsetTopValue = relativePointOffsetTopValue + this.centralDotHeight / 2;
+        let relativeBarOffsetTop = relativeBarOffsetTopValue + "px";
+
+        let newsCentralDot = document.createElement("div");
+        newsCentralDot.style.height = this.centralDotHeight + "px";
+        newsCentralDot.style.width = this.centralDotHeight + "px";
+        newsCentralDot.style.background = "#165976";
+        newsCentralDot.style.borderRadius = "50%";
+        newsCentralDot.style.position = "absolute";
+        newsCentralDot.style.marginTop = relativePointOffsetTop;
+        document.querySelector(".news .main .centralSection").appendChild(newsCentralDot);
+
+        let line1Height = 30;
+        let line2Height = 20;
+
+        if(!this.lastShown){
+            let newsCentralLine = document.createElement("div");
+            newsCentralLine.style.height = "calc(" + this.newsDivMargin + "*2)";
+            newsCentralLine.style.width = "10px";
+            newsCentralLine.style.marginTop = relativeBarOffsetTop;
+            newsCentralLine.style.background = "#165976";
+            newsCentralLine.style.position = "absolute";
+            document.querySelector(".news .main .centralSection").appendChild(newsCentralLine);
+        } else {
+            let newsCentralFinalLine1 = document.createElement("div");
+            newsCentralFinalLine1.style.height = line1Height + "px";
+            newsCentralFinalLine1.style.width = "10px";
+            newsCentralFinalLine1.style.marginTop = relativeBarOffsetTop;
+            newsCentralFinalLine1.style.background = "#165976";
+            newsCentralFinalLine1.style.position = "absolute";
+            document.querySelector(".news .main .centralSection").appendChild(newsCentralFinalLine1);
+
+            let offset = line1Height;
+            for(let a = 0; a <= 3; a++){
+                let marginTop = relativeBarOffsetTopValue + offset;
+                if(a % 2 != 0){
+                    offset += line2Height;
+                    let newsCentralFinalLine2 = document.createElement("div");
+                    newsCentralFinalLine2.style.height = line2Height + "px";
+                    newsCentralFinalLine2.style.width = "10px";
+                    newsCentralFinalLine2.style.marginTop = marginTop + "px";
+                    newsCentralFinalLine2.style.background = "#165976";
+                    newsCentralFinalLine2.style.position = "absolute";
+                    document.querySelector(".news .main .centralSection").appendChild(newsCentralFinalLine2);
+                } else {
+                    offset += line2Height - 8;
+                }
+            }
         }
     }
 }
 
-let lastNews1 = new NewsDiv("Corsi di sci jr 2022/2023", "Ciao bambini,<br>siete pronti a ritornare in pista:<br>i maestri vi stanno aspettando!<br><br>Vai alla pagina Corsi promozionali,<br>e scarica il volantino con le informazioni per i corsi di sci junior 2022/2023", "/static/media/images/Promozionali_3.jpg");
-let lastNews2 = new NewsDiv("Lorem ipsum", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat", "/static/media/images/IMG_1157.jpg");
-let lastNews3 = new NewsDiv("ciao", "kebab", "/static/media/images/Promozionali_3.jpg");
-let lastNews4 = new NewsDiv("aigdf", "lfUHAOLIDGBAGSHBAOLGUA", "/static/media/images/Promozionali_3.jpg");
 
-lastNews1.insertInHTML();
-lastNews2.insertInHTML();
-lastNews3.insertInHTML();
-lastNews4.insertInHTML();
+// FOOTER SECTION
+
+

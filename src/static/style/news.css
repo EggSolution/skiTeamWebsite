@@ -35,11 +35,12 @@ body {
     border-radius: 33px;
 }
 .news .main {
-    height: auto;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 55px;
 }
 .news .main .leftSection {
     height: auto;
@@ -47,11 +48,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 10%;
 }
 .news .main .centralSection {
     height: auto;
     width: 50px;
-    background: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .news .main .rightSection {
     height: auto;
@@ -59,4 +63,5 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-right: 10%;
 }
