@@ -10,7 +10,7 @@ body {
 .attivita {
     width: 100%;
     height: auto;
-    background-color: rgb(210,232,238);
+    background-color: transparent;
     display: flex;
     flex-direction: column;
 }
@@ -47,7 +47,7 @@ body {
     display: flex;
     flex-direction: row;
     margin-bottom: 100px;
-    width: 65%;
+    width: 70%;
     height: 400px;
 }
 .attivita .main .sez .sx,
