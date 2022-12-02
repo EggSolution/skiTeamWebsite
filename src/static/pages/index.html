@@ -164,13 +164,28 @@
             <div class="main">
                 <div class="mainDiv">
                     <div class="map">
-    
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2755.560925973558!2d10.835564815907162!3d46.318556879120386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782f569c3e6b8f1%3A0x1969c75c35b9ddf0!2sSki%20Team%20Val%20di%20Sole!5e0!3m2!1sit!2sit!4v1669997307078!5m2!1sit!2sit"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                     <div class="message">
                         <div class="button">
                             <a></a>
                         </div>
-    
+                        <div class="messageDiv">
+                            <form action="/msg" method="post">
+                                <a>Messaggio</a>
+                                <input class="emailForm" type="email" placeholder="Email:">
+                                <input class="objForm" type="text" placeholder="Oggetto:">
+                                <textarea class="msgForm" placeholder="Messaggio:"></textarea>
+                                <input class="subForm" type="submit" value="Invia!">
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <a>Via alla centrale, 38020 Mestriago di Commezzadura (TN)</a>
