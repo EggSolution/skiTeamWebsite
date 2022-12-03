@@ -10,6 +10,7 @@
 body {
     height: auto;
     width: 100%;
+    background: linear-gradient(180deg, #E8F7F9 0%, #6FA5BC 109.61%);
 }
 
 /* CHI SIAMO SECTION */
