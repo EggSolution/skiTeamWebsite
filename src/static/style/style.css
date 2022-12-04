@@ -32,10 +32,67 @@ body {
     margin-left: 25px;
 }
 .home .sezioneBottoni{
-    height: 10%;
+    height: 5%;
     width: 60%;
-    background-color: GREEN;
     margin-right: 25px;
+    margin-top: 1.5%;
+}
+.home .sezioneBottoni .divBottoni{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.home .sezioneBottoni .divBottoni div{
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+.home .sezioneBottoni .divBottoni div .scritta{
+    height: 90%;
+    width: 100%;
+}
+.home .sezioneBottoni .divBottoni div .scritta a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 200%;
+    color: #000000;
+}
+.home .sezioneBottoni .divBottoni div .lineaDiv{
+    height: 10%;
+    width: 100%;
+}
+.home .sezioneBottoni .divBottoni div .lineaDiv .linea{
+    height: 100%;
+    width: 10%;
+    background-color: #000000;
+    border-radius: 0px 100px 100px 0px;
+    transition-duration: 0.5s; 
+}
+.home .sezioneBottoni .divBottoni .chiSiamo:hover > .lineaDiv .linea{
+    width: 100%;
+    border-radius: 0px 0px 0px 0px; 
+}
+.home .sezioneBottoni .divBottoni .attivita:hover > .lineaDiv .linea{
+    width: 100%;
+    border-radius: 0px 0px 0px 0px; 
+}
+.home .sezioneBottoni .divBottoni .galleria:hover > .lineaDiv .linea{
+    width: 100%;
+    border-radius: 0px 0px 0px 0px; 
+}
+.home .sezioneBottoni .divBottoni .news:hover > .lineaDiv .linea{
+    width: 100%;
+    border-radius: 0px 0px 0px 0px; 
+}
+.home .sezioneBottoni .divBottoni .contatti:hover > .lineaDiv .linea{
+    width: 100%;
+    border-radius: 0px 0px 0px 0px; 
+}
+.home .sezioneBottoni .divBottoni .modulistica:hover > .lineaDiv .linea{
+    width: 100%;
+    border-radius: 0px 0px 0px 0px; 
 }
 /**/
 
