@@ -1,5 +1,5 @@
 //HOME SECTION
-/*let iHome = 0;
+let iHome = 0;
 let images = [];
 let slideTime = 3000;
 let home =  document.querySelector(".home")
@@ -9,18 +9,7 @@ images[1] = '/static/media/images/Home_2.jpg';
 images[2] = '/static/media/images/Home_3.jpg';
 images[3] = '/static/media/images/Home_4.jpg';
 
-function changeBackground(nSlide){
-    home.style.backgroundImage = "url(" + images[nSlide] + ")" ;
-
-    if (iHome < images.length - 1) {
-        iHome++;
-    } else {
-        iHome = 0;
-    }
-
-    setTimeout("changePicture()", slideTime);
-}
-*/
+home.style.backgroundImage = "url(" + images[0] + ")" ;
 // CHI SIAMO SECTION
 
 
