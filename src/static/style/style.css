@@ -16,7 +16,6 @@ body {
 .home{
     width: 100%;
     height: 100vh;    
-    background-image: url("/static/media/images/Home_1.jpg");
     display: flex;
     flex-direction: row;
     background-position: center;
@@ -53,10 +52,12 @@ body {
 .home .sezioneBottoni .divBottoni div .scritta{
     height: 90%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .home .sezioneBottoni .divBottoni div .scritta a{
     font-family: 'Roboto', sans-serif;
-    font-size: 200%;
+    font-size: 180%;
     color: #000000;
 }
 .home .sezioneBottoni .divBottoni div .lineaDiv{
@@ -68,7 +69,7 @@ body {
     width: 10%;
     background-color: #000000;
     border-radius: 0px 100px 100px 0px;
-    transition-duration: 0.5s; 
+    transition-duration: 0.5s;
 }
 .home .sezioneBottoni .divBottoni .chiSiamo:hover > .lineaDiv .linea{
     width: 100%;
