@@ -38,12 +38,12 @@ function gallery() {
             case "open":
                 // switch to open
                 sezGallery.style.height = "594px;"
-                currentStatus = "close"
+                currentStatus = "close";
                 break;
             case "close":
                 // switch to close
                 sezGallery.style.height = "0px;"
-                currentStatus = "open"
+                currentStatus = "open";
                 break;
         }
     }) 
