@@ -17,7 +17,38 @@ home.style.backgroundImage = "url(" + images[0] + ")" ;
 // ATTIVITA SECTION
 
 
+// GALLERY SECTION
+function gallery() {
+    for (let i = 0; i < 15; i++) {
+        let newDiv = document.createElement('div');
+        newDiv.className = "image";
+        document.querySelector(".gallery .main .sez .sezImg").appendChild(newDiv);
+        console.log(i);
+    }
 
+    let currentStatus;
+    let sezGallery = document.querySelector(".gallery .main .sez");
+    let buttonGallery = document.querySelector(".gallery .main .button");
+    currentStatus = "close";
+
+    buttonGallery.addEventListener("Click", () => {
+        console.log("bella");
+
+        switch(currentStatus){
+            case "open":
+                // switch to open
+                sezGallery.style.height = "594px;"
+                currentStatus = "close"
+                break;
+            case "close":
+                // switch to close
+                sezGallery.style.height = "0px;"
+                currentStatus = "open"
+                break;
+        }
+    }) 
+}
+gallery();
 // NEWS SECTION
 let newsNumber = 0;
 
