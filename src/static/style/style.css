@@ -378,9 +378,10 @@ body {
 .attivita .main .sez .dx,
 .attivita .main .sez2 .dx,
 .attivita .main .sez3 .dx{
-    background-color: #000000;
+    background-position: center;
+    background-size: cover;
     height: 100%;
-    width: 40%;
+    width: 45%;
 }
 .attivita .main .sez .sx .content .titoletto,
 .attivita .main .sez2 .sx .content .titoletto,
