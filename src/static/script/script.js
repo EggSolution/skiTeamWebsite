@@ -1,7 +1,7 @@
 //HOME SECTION
-let iHome = 0;
+let iHome = 1;
 let images = [];
-let slideTime = 3000;
+let slideTime = 5000;
 let home =  document.querySelector(".home")
 
 images[0] = '/static/media/images/Home_1.jpg';
@@ -9,7 +9,16 @@ images[1] = '/static/media/images/Home_2.jpg';
 images[2] = '/static/media/images/Home_3.jpg';
 images[3] = '/static/media/images/Home_4.jpg';
 
-home.style.backgroundImage = "url(" + images[0] + ")" ;
+home.style.backgroundImage = "url(" + images[0] + ")";
+
+setInterval(()=>{
+    home.style.backgroundImage = "url(" + images[iHome] + ")";
+    iHome++;
+    if(iHome > 3){
+        iHome = 0;
+    }
+}, slideTime);
+
 // CHI SIAMO SECTION
 
 
@@ -23,7 +32,6 @@ function gallery() {
         let newDiv = document.createElement('div');
         newDiv.className = "image";
         document.querySelector(".gallery .main .sez .sezImg").appendChild(newDiv);
-        console.log(i);
     }
 
     let currentStatus;
@@ -49,6 +57,7 @@ function gallery() {
     }) 
 }
 gallery();
+
 // NEWS SECTION
 let newsNumber = 0;
 
