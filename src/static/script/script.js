@@ -1,22 +1,33 @@
 //HOME SECTION
-let iHome = 1;
 let images = [];
 let slideTime = 5000;
-let home =  document.querySelector(".home")
+let home =  document.querySelector(".home");
+let sliderImmagini = document.querySelector(".sliderImmagini");
 
 images[0] = '/static/media/images/Home_1.jpg';
 images[1] = '/static/media/images/Home_2.jpg';
 images[2] = '/static/media/images/Home_3.jpg';
 images[3] = '/static/media/images/Home_4.jpg';
 
-home.style.backgroundImage = "url(" + images[0] + ")";
+sliderImmagini.style.width = "" + images.length * 100 + "vw";
+sliderImmagini.style.transform = "translate(-" + (100 - (100/images.length)) + "%)"; 
 
+for(let a = 0; a < images.length; a++){
+    let img = document.createElement("img");
+    img.src = images[a];
+    document.querySelector(".home .sliderImmagini").appendChild(img);
+}
+
+let iHome = images.length;
+let slidePercentage;
 setInterval(()=>{
-    home.style.backgroundImage = "url(" + images[iHome] + ")";
-    iHome++;
-    if(iHome > 3){
-        iHome = 0;
+    iHome--;
+    if(iHome < 0){
+        iHome = images.length;
     }
+    slidePercentage = iHome * (100 / images.length);
+    sliderImmagini.style.transform = "translate(-" + (slidePercentage - (100 / images.length)) + "%)";
+    console.log(iHome);
 }, slideTime);
 
 // CHI SIAMO SECTION
