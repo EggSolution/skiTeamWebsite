@@ -20,8 +20,6 @@ body {
     height: 100vh;    
     display: flex;
     flex-direction: column;
-    background-position: center;
-    background-size: cover;
 }
 .home .sliderImmagini{
     height: 100vh;
@@ -42,13 +40,55 @@ body {
 .home .fasciaAlta{
     width: 100%;
     height: 17%;
-    background-color: red;
+    display: flex;
+    flex-direction: row;
 }
+.home .fasciaAlta .immagine{
+    height: 100%;
+    width: 12%;
+    background-image: url("/static/media/images/skiTeamLogo.png");
+    background-position: center;
+    background-size: cover;
+}               
+.home .fasciaAlta .sezioneBottoni{
+    height: 100%;
+    width: 70%;
+    margin-left: 18%;
+    display: flex;
+    flex-direction: row-column;    
+}
+.home .fasciaAlta .sezioneBottoni .bottoni{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5%;
+}
+.home .fasciaAlta .sezioneBottoni .bottoni div{
+    height: auto;
+    width: auto;
+}
+.home .fasciaAlta .sezioneBottoni .bottoni div a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 200%;
+    color: #000000;
+}
+.home .fasciaAlta .sezioneBottoni .bottoni div .linea{
+    background-color: #000000;
+    height: 5px;
+    width: 10%;
+    transition: 1s;
+    border-radius: 0px 30px 30px 0px;
+}
+.home .fasciaAlta .sezioneBottoni .bottoni div:hover > .linea{
+    width: 100%;
+} 
 .home .sezioneFreccia{
     width: 100%;
-    height: 15%;
-    background-color: green;
-    margin-top: 68vh;
+    height: 13%;
+    margin-top: 70vh;
+    display: flex;
+    justify-content: center;
 }
 /**/
 
