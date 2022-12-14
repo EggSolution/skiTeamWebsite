@@ -1,33 +1,33 @@
+//aaaaaaaaaaaa
 //HOME SECTION
-let images = [];
+let homeImages = [];
 let slideTime = 5000;
 let home =  document.querySelector(".home");
 let sliderImmagini = document.querySelector(".sliderImmagini");
 
-images[0] = '/static/media/images/Home_1.jpg';
-images[1] = '/static/media/images/Home_2.jpg';
-images[2] = '/static/media/images/Home_3.jpg';
-images[3] = '/static/media/images/Home_4.jpg';
+homeImages[0] = '/static/media/images/Home_1.jpg';
+homeImages[1] = '/static/media/images/Home_2.jpg';
+homeImages[2] = '/static/media/images/Home_3.jpg';
+homeImages[3] = '/static/media/images/Home_4.jpg';
 
-sliderImmagini.style.width = "" + images.length * 100 + "vw";
-sliderImmagini.style.transform = "translate(-" + (100 - (100/images.length)) + "%)"; 
+sliderImmagini.style.width = "" + homeImages.length * 100 + "vw";
+sliderImmagini.style.transform = "translate(-" + (100 - (100/homeImages.length)) + "%)"; 
 
-for(let a = 0; a < images.length; a++){
+for(let a = 0; a < homeImages.length; a++){
     let img = document.createElement("img");
-    img.src = images[a];
+    img.src = homeImages[a];
     document.querySelector(".home .sliderImmagini").appendChild(img);
 }
 
-let iHome = images.length;
+let iHome = homeImages.length;
 let slidePercentage;
 setInterval(()=>{
     iHome--;
     if(iHome < 0){
-        iHome = images.length;
+        iHome = homeImages.length;
     }
-    slidePercentage = iHome * (100 / images.length);
-    sliderImmagini.style.transform = "translate(-" + (slidePercentage - (100 / images.length)) + "%)";
-    console.log(iHome);
+    slidePercentage = iHome * (100 / homeImages.length);
+    sliderImmagini.style.transform = "translate(-" + (slidePercentage - (100 / homeImages.length)) + "%)";
 }, slideTime);
 
 // CHI SIAMO SECTION
@@ -37,31 +37,57 @@ setInterval(()=>{
 // ATTIVITA SECTION
 
 
+
 // GALLERY SECTION
+let galleryImages = [];
+
+galleryImages[0]  = '/static/media/images/Home_1.jpg';
+galleryImages[1]  = '/static/media/images/Home_2.jpg';
+galleryImages[2]  = '/static/media/images/Home_3.jpg';
+galleryImages[3]  = '/static/media/images/Home_4.jpg';
+galleryImages[4]  = '/static/media/images/Home_4.jpg';
+galleryImages[5]  = '/static/media/images/Home_4.jpg';
+galleryImages[6]  = '/static/media/images/Home_4.jpg';
+galleryImages[7]  = '/static/media/images/Home_4.jpg';
+galleryImages[8]  = '/static/media/images/Home_4.jpg';
+galleryImages[9]  = '/static/media/images/Home_4.jpg';
+galleryImages[10] = '/static/media/images/Home_4.jpg';
+galleryImages[11] = '/static/media/images/Home_4.jpg';
+galleryImages[12] = '/static/media/images/Home_4.jpg';
+galleryImages[13] = '/static/media/images/Home_4.jpg';
+galleryImages[14] = '/static/media/images/Home_4.jpg';
+galleryImages[15] = '/static/media/images/Home_4.jpg';
+galleryImages[16] = '/static/media/images/Home_4.jpg';
+
 function gallery() {
-    for (let i = 0; i < 15; i++) {
+    for (let a = 0; a < galleryImages.length; a++) {
         let newDiv = document.createElement('div');
         newDiv.className = "image";
+        newDiv.style.background = "url(" + galleryImages[a] + ")";
+        newDiv.style.backgroundPosition = "center";
+        newDiv.style.backgroundSize = "cover";
         document.querySelector(".gallery .main .sez .sezImg").appendChild(newDiv);
     }
 
-    let currentStatus;
+    let currentStatus = "closed";
     let sezGallery = document.querySelector(".gallery .main .sez");
     let buttonGallery = document.querySelector(".gallery .main .button");
-    currentStatus = "close";
+    // default status
+    sezGallery.style.height = "594px";
 
-    buttonGallery.addEventListener("Click", () => {
-        console.log("bella");
-
+    buttonGallery.addEventListener("click", () => {
         switch(currentStatus){
             case "open":
                 // switch to open
-                sezGallery.style.height = "594px;"
-                currentStatus = "close";
+                sezGallery.style.height = "594px";
+                buttonGallery.style.transform = "rotate(0deg)";
+                currentStatus = "closed";
                 break;
-            case "close":
+            case "closed":
                 // switch to close
-                sezGallery.style.height = "0px;"
+                sezGallery.style.height = "auto";
+                sezGallery.style.maxHeight = "10000px";
+                buttonGallery.style.transform = "rotate(180deg)";
                 currentStatus = "open";
                 break;
         }
@@ -82,7 +108,7 @@ class NewsDiv {
         this.imgPath = imgPath;
         this.newsDivMargin = 80;
         this.newsDivHeight = 240;
-        this.newsDivWidth = 500;
+        this.newsDivWidth = 80;
         this.newsDivImgWidth = 200;
         this.newsDivTextTitleSize = 20;
         this.newsDivTextDescriptionSize = 16;
@@ -111,7 +137,7 @@ class NewsDiv {
 
         this.newsDivMargin += "px";
         this.newsDivHeight += "px";
-        this.newsDivWidth += "px";
+        this.newsDivWidth += "%";
         this.newsDivImgWidth += "px";
         this.newsDivTextTitleSize += "px";
         this.newsDivTextDescriptionSize += "px";
@@ -314,7 +340,6 @@ footerButtonText.innerHTML = "Messaggi";
 messageDiv.style.transform = "translateX(calc(100% - 51px))";
 
 footerButton.addEventListener("click", () => {
-    console.log("ciao");
     switch(currentStatus){
         case "map":
             // switch to message

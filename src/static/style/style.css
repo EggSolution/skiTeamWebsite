@@ -2,6 +2,7 @@
 
 :root {
     --titleBottomMargin: 55px;
+    --widthSection: 70%;            
 }
 * {
     padding: 0;
@@ -14,6 +15,7 @@ body {
     background: linear-gradient(180deg, #E8F7F9 0%, #6FA5BC 109.61%);
     overflow-x: hidden;
 }
+
 /*HOME SECTION*/
 .home{
     width: 100vw;
@@ -39,23 +41,21 @@ body {
 }
 .home .fasciaAlta{
     width: 100%;
-    height: 17%;
+    height: 80px;
     display: flex;
     flex-direction: row;
+    background-color: #ffffff;
 }
 .home .fasciaAlta .immagine{
     height: 100%;
-    width: 12%;
-    background-image: url("/static/media/images/skiTeamLogo.png");
-    background-position: center;
-    background-size: cover;
+    margin-left: 30px;
 }               
 .home .fasciaAlta .sezioneBottoni{
     height: 100%;
-    width: 70%;
+    width: 60%;
     margin-left: 18%;
     display: flex;
-    flex-direction: row-column;    
+    flex-direction: row-column;
 }
 .home .fasciaAlta .sezioneBottoni .bottoni{
     height: auto;
@@ -71,13 +71,14 @@ body {
 .home .fasciaAlta .sezioneBottoni .bottoni div a{
     font-family: 'Roboto', sans-serif;
     font-size: 200%;
-    color: #000000;
+    color: #051C31;
 }
 .home .fasciaAlta .sezioneBottoni .bottoni div .linea{
-    background-color: #000000;
+    background-color: #051C31;
     height: 5px;
     width: 10%;
-    transition: 1s;
+    margin-left: 3px;
+    transition: 0.4s;
     border-radius: 0px 30px 30px 0px;
 }
 .home .fasciaAlta .sezioneBottoni .bottoni div:hover > .linea{
@@ -85,8 +86,9 @@ body {
 } 
 .home .sezioneFreccia{
     width: 100%;
-    height: 13%;
-    margin-top: 70vh;
+    height: 75px;
+    position: absolute;
+    bottom: 20px;
     display: flex;
     justify-content: center;
 }
@@ -96,7 +98,11 @@ body {
 .chiSiamo {
     width: 100%;
     height: auto;
-    margin-bottom: 100px;
+    margin-bottom: 140px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .chiSiamo .titolo {
     height: auto;
@@ -118,21 +124,22 @@ body {
     border-radius: 33px;
 }
 .chiSiamo .main{
-    width: 100%;
+    width: 74%;
     height: auto;
     display: flex;
     flex-direction: column;
 }
 .chiSiamo .main .tessere{
     width: 100%;
-    height: 420px; /* REVISIONARE CON MAGLIO */
+    height: 370px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-bottom : 30px;
 }
 .chiSiamo .main .tessere .tDirettivo{
     height: 100%;
-    width: 25%;
+    width: 30%;
     border-radius: 31px;
     overflow: hidden;
 }
@@ -168,7 +175,7 @@ body {
 }
 .chiSiamo .main .tessere .tDirettivo .nomeTessere a{ 
     font-family: 'Roboto', sans-serif;
-    font-size: 200%;
+    font-size: 155%;
     color: #e7e7e7;
 }
 .chiSiamo .main .tessere .tDirettivo .nomeTessere .sotto{
@@ -177,7 +184,7 @@ body {
 }
 .chiSiamo .main .tessere .tAllenatori{
     height: 100%;
-    width: 25%;
+    width: 30%;
     border-radius: 31px;    
     overflow: hidden;
 }
@@ -213,7 +220,7 @@ body {
 }
 .chiSiamo .main .tessere .tAllenatori .nomeTessere a{ 
     font-family: 'Roboto', sans-serif;
-    font-size: 200%;
+    font-size: 155%;
     color: #e7e7e7;
 }
 .chiSiamo .main .tessere .tAllenatori .nomeTessere .sotto{
@@ -222,7 +229,7 @@ body {
 }
 .chiSiamo .main .tessere .tRegolamento{
     height: 100%;
-    width: 25%;
+    width: 30%;
     border-radius: 31px;    
     overflow: hidden;
 }
@@ -258,7 +265,7 @@ body {
 }
 .chiSiamo .main .tessere .tRegolamento .nomeTessere a{ 
     font-family: 'Roboto', sans-serif;
-    font-size: 200%;
+    font-size: 155%;
     color: #e7e7e7;
 }
 .chiSiamo .main .tessere .tRegolamento .nomeTessere .sotto{
@@ -274,7 +281,7 @@ body {
     align-items: center;
 }
 .chiSiamo .main .ChiSiamoScritte .scritte{
-    width: 88.5%;
+    width: 100%;
     height: 90%;
 }
 .chiSiamo .main .ChiSiamoScritte .scritte .scritteSopra{
@@ -340,7 +347,7 @@ body {
     display: flex;
     flex-direction: row;
     margin-bottom: 100px;
-    width: 70%;
+    width: 74%;
     height: 400px;
 }
 .attivita .main .sez .sx,
@@ -432,7 +439,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 100px;
+    margin-bottom: 130px;
 }
 .gallery .titolo {
     height: auto;
@@ -461,31 +468,29 @@ body {
     flex-direction: column;
 }
 .gallery .main .sez{
+    transition: 0.5s ease;
     justify-content: center;
     display: block;
     overflow: hidden;
-    height: 594px;
-    width: 70%;
+    width: 74%;
 }
 .gallery .main .sezImg{
-    position: relative;
-    justify-content: center;
     display: grid;
+    gap: 20px;
     grid-template-columns: auto auto auto auto;
     height: auto;
     width: 100%;
 }
 .gallery .main .sez .image{
-    margin: 10px;
     background-color: #000000;
     height: 230px;
-    width: 316px;
+    width: 100%;
 }
 .gallery .main .button{
     margin-top:60px;
     height: 30px;
-    width: 45px;
-    background-color: #165976;
+    width: auto;
+    transition: 0.5s;
 }
 /* NEWS SECTION */
 .news {
