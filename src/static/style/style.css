@@ -44,16 +44,17 @@ body {
     height: 80px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     background-color: #ffffff;
 }
 .home .fasciaAlta .immagine{
-    height: 100%;
+    height: 64px;
     margin-left: 30px;
 }               
 .home .fasciaAlta .sezioneBottoni{
     height: 100%;
     width: 60%;
-    margin-left: 18%;
+    margin-left: calc(100% - 60% - 155px);
     display: flex;
     flex-direction: row-column;
 }
@@ -70,7 +71,7 @@ body {
 }
 .home .fasciaAlta .sezioneBottoni .bottoni div a{
     font-family: 'Roboto', sans-serif;
-    font-size: 200%;
+    font-size: 170%;
     color: #051C31;
 }
 .home .fasciaAlta .sezioneBottoni .bottoni div .linea{
