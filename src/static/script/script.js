@@ -1,5 +1,9 @@
-//aaaaaaaaaaaa
-//HOME SECTION
+// MENU SECTION
+document.querySelector(".home .fasciaAlta .immagine").addEventListener("click", ()=>{
+    window.location.href = '/#';
+});
+
+// HOME SECTION
 let homeImages = [];
 let slideTime = 5000;
 let home =  document.querySelector(".home");
@@ -15,6 +19,8 @@ sliderImmagini.style.transform = "translate(-" + (100 - (100/homeImages.length))
 
 for(let a = 0; a < homeImages.length; a++){
     let img = document.createElement("div");
+    img.style.height = "100vh";
+    img.style.width = (100 / homeImages.length) + "%";
     img.style.background = "url('" + homeImages[a] + "')";
     img.style.backgroundPosition = "center";
     img.style.backgroundSize = "cover";
@@ -23,6 +29,7 @@ for(let a = 0; a < homeImages.length; a++){
 
 let iHome = homeImages.length;
 let slidePercentage;
+
 setInterval(()=>{
     iHome--;
     if(iHome < 0){
