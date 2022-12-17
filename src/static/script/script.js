@@ -14,8 +14,10 @@ sliderImmagini.style.width = "" + homeImages.length * 100 + "vw";
 sliderImmagini.style.transform = "translate(-" + (100 - (100/homeImages.length)) + "%)"; 
 
 for(let a = 0; a < homeImages.length; a++){
-    let img = document.createElement("img");
-    img.src = homeImages[a];
+    let img = document.createElement("div");
+    img.style.background = "url('" + homeImages[a] + "')";
+    img.style.backgroundPosition = "center";
+    img.style.backgroundSize = "cover";
     document.querySelector(".home .sliderImmagini").appendChild(img);
 }
 
