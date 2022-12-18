@@ -182,25 +182,59 @@ body {
     justify-content: center;
     align-items: center;
 }
-.chiSiamo .main .tessere .tDirettivo .nomeTessere a{ 
+.chiSiamo .main .tessere .tDirettivo .nomeTessere a { 
     font-family: 'Roboto', sans-serif;
-    font-size: 155%;
-    color: #e7e7e7;
+    font-size: 150%;
+    color: white;
 }
-.chiSiamo .main .tessere .tDirettivo .nomeTessere .sotto{
+/* NON VA */
+.chiSiamo .main .tessere .tDirettivo .nomeTessere .sotto::-webkit-scrollbar-track {
+    background: #165976;
+}
+.chiSiamo .main .tessere .tDirettivo .nomeTessere .sotto {
     width: 100%;
     height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    overflow-y: scroll;
 }
-.chiSiamo .main .tessere .tAllenatori{
+.chiSiamo .main .tessere .tDirettivo .nomeTessere .sotto div:nth-child(1) {
+    margin-top: 20px;
+}
+.chiSiamo .main .tessere .tDirettivo .nomeTessere .sotto div:nth-child(7) {
+    margin-bottom: 20px;
+}
+.chiSiamo .main .tessere .tDirettivo .nomeTessere .sotto div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 4%;
+}
+.chiSiamo .main .tessere .tDirettivo .nomeTessere .sotto div div {
+    height: 44px;
+    width: 44px;
+    background: white;
+    border-radius: 50%;
+}
+.chiSiamo .main .tessere .tDirettivo .nomeTessere .sotto div a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 120%;
+    color: white;
+    margin-left: 3%;
+    transform: translateY(9px);
+}
+.chiSiamo .main .tessere .tAllenatori {
     height: 100%;
     width: 30%;
     border-radius: 31px;    
     overflow: hidden;
 }
-.chiSiamo .main .tessere .tAllenatori:hover > .nomeTessere{
+.chiSiamo .main .tessere .tAllenatori:hover > .nomeTessere {
     transform: translateY(-85%);
 }
-.chiSiamo .main .tessere .tAllenatori .divImg{
+.chiSiamo .main .tessere .tAllenatori .divImg {
     width: 100%;
     height: 85%;
     border-radius: 31px 31px 0px 0px;
@@ -208,7 +242,7 @@ body {
     background-position: center;
     background-size: cover;
 }
-.chiSiamo .main .tessere .tAllenatori .nomeTessere{
+.chiSiamo .main .tessere .tAllenatori .nomeTessere {
     width: 100%;
     height: 100%;
     background-color: #165976;
@@ -220,32 +254,53 @@ body {
     display: flex;
     flex-direction: column;
 }
-.chiSiamo .main .tessere .tAllenatori .nomeTessere .sopra{
+.chiSiamo .main .tessere .tAllenatori .nomeTessere .sopra {
     width: 100%;
     height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.chiSiamo .main .tessere .tAllenatori .nomeTessere a{ 
+.chiSiamo .main .tessere .tAllenatori .nomeTessere a {
     font-family: 'Roboto', sans-serif;
-    font-size: 155%;
-    color: #e7e7e7;
+    font-size: 140%;
+    color: white;
 }
-.chiSiamo .main .tessere .tAllenatori .nomeTessere .sotto{
+.chiSiamo .main .tessere .tAllenatori .nomeTessere .sotto {
     width: 100%;
     height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.chiSiamo .main .tessere .tRegolamento{
+.chiSiamo .main .tessere .tAllenatori .nomeTessere .sotto a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 120%;
+    color: white;
+    width: 85%;
+    padding-top: 30px;
+}
+.chiSiamo .main .tessere .tAllenatori .nomeTessere .sotto button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 120%;
+    color: white;
+    background: #051C31;
+    margin-top: 40px;
+    border: solid 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 30%;
+}
+.chiSiamo .main .tessere .tRegolamento {
     height: 100%;
     width: 30%;
     border-radius: 31px;    
     overflow: hidden;
 }
-.chiSiamo .main .tessere .tRegolamento:hover > .nomeTessere{
+.chiSiamo .main .tessere .tRegolamento:hover > .nomeTessere {
     transform: translateY(-85%);
 }
-.chiSiamo .main .tessere .tRegolamento .divImg{
+.chiSiamo .main .tessere .tRegolamento .divImg {
     width: 100%;
     height: 85%;
     border-radius: 31px 31px 0px 0px;
@@ -253,7 +308,7 @@ body {
     background-position: center;
     background-size: cover;
 }
-.chiSiamo .main .tessere .tRegolamento .nomeTessere{
+.chiSiamo .main .tessere .tRegolamento .nomeTessere {
     width: 100%;
     height: 100%;
     background-color: #165976;
@@ -265,21 +320,42 @@ body {
     display: flex;
     flex-direction: column;
 }
-.chiSiamo .main .tessere .tRegolamento .nomeTessere .sopra{
+.chiSiamo .main .tessere .tRegolamento .nomeTessere .sopra {
     width: 100%;
     height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.chiSiamo .main .tessere .tRegolamento .nomeTessere a{ 
+.chiSiamo .main .tessere .tRegolamento .nomeTessere a {
     font-family: 'Roboto', sans-serif;
-    font-size: 155%;
-    color: #e7e7e7;
+    font-size: 140%;
+    color: white;
 }
-.chiSiamo .main .tessere .tRegolamento .nomeTessere .sotto{
+.chiSiamo .main .tessere .tRegolamento .nomeTessere .sotto {
     width: 100%;
     height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chiSiamo .main .tessere .tRegolamento .nomeTessere .sotto a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 120%;
+    color: white;
+    width: 85%;
+    padding-top: 30px;
+}
+.chiSiamo .main .tessere .tRegolamento .nomeTessere .sotto button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 120%;
+    color: white;
+    background: #051C31;
+    margin-top: 20px;
+    border: solid 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 30%;
 }
 .chiSiamo .main .ChiSiamoScritte{
     width: 100%;
