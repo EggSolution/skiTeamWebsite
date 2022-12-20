@@ -283,7 +283,7 @@ switch(sezione){
         let giovani = document.createElement('div');
 
         main.style.display = "flex";
-        main.style.backgroundColor = "red"; 
+        //main.style.backgroundColor = "red"; 
         main.style.flexDirection = "column";
 
         main.appendChild(titolo);
@@ -291,25 +291,30 @@ switch(sezione){
         titolo.style.height = "auto";
         titolo.style.width = "auto;"
         titolo.style.fontFamily = "'Roboto', sans-serif";
-        titolo.style.fontSize = "300%";
-        titolo.style.color = "#051C31";
-        titolo.style.marginTop = "30px";
+        titolo.style.fontSize = "40px";
+        titolo.style.marginTop = "50px";
+        titolo.style.marginLeft = "5%";
 
         main.appendChild(sezioni);
         sezioni.style.width = "100%";
         sezioni.style.height = "auto";
         sezioni.style.display = "flex";
-        sezioni.style.backgroundColor = "violet"; 
         sezioni.style.flexDirection = "row";
-        sezioni.style.marginTop = "160px";
-        sezioni.style.position = "absolute";
+        sezioni.style.marginTop = "" + (180-90) +"px";
+        sezioni.style.position = "relative";
+        sezioni.style.marginBottom = "50px";
 
         sezioni.appendChild(baby);
         baby.style.height = "auto";
         baby.style.width = "27%";
-        baby.style.backgroundColor = "blue";
+        baby.style.backgroundColor = "#E5E4E4";
+        baby.style.borderRadius = "30px";
         baby.style.marginLeft = "5%";
         baby.style.marginRight = "5%";
+        baby.style.display = "flex";
+        baby.style.flexDirection = "column";
+        baby.style.padding = "20px";
+        baby.style.alignItems = "center";
 
         let titoloBaby = document.createElement("a")
         baby.appendChild(titoloBaby);
@@ -317,25 +322,126 @@ switch(sezione){
         titoloBaby.style.fontFamily = "'Roboto', sans-serif";
         titoloBaby.style.fontSize = "200%";
         titoloBaby.style.color = "#051C31";
+        titoloBaby.style.marginTop = "15px";
+        titoloBaby.style.marginBottom = "25px";
 
         let scritteBaby = document.createElement("a");
         baby.appendChild(scritteBaby);
-        scritteBaby.innerHTML += "Le categorie Baby e Cuccioli accompagnano i bambini nei primi quattro anni di esperienza a livello agonistico. Attraverso allenamenti mirati i bambini acquisiscono autonomia dell'attrezzo e sviluppano i movimenti fondamentali nelle discipline base dello sci alpino (slalom gigante e slalom speciale). La partecipazione alle gare stimola il miglioramento personale e permette di trasmettere ai bambini il giusto valore di una competizione sana e leale, pur mantenendo il divertimento come principale obiettivo."
+        scritteBaby.innerHTML += "Le categorie Baby e Cuccioli accompagnano i bambini nei primi quattro anni di esperienza a livello agonistico. Attraverso allenamenti mirati i bambini acquisiscono autonomia dell'attrezzo e sviluppano i movimenti fondamentali nelle discipline base dello sci alpino (slalom gigante e slalom speciale). La partecipazione alle gare stimola il miglioramento personale e permette di trasmettere ai bambini il giusto valore di una competizione sana e leale, pur mantenendo il divertimento come principale obiettivo.";
+        scritteBaby.style.lineHeight = "20pt";
+        scritteBaby.style.textAlign = "justify";
+        scritteBaby.style.fontFamily = "'Roboto', sans-serif";
+        scritteBaby.style.fontSize = "17px";
+        scritteBaby.style.color = "#051C31";
+
+        let bottoneBaby = document.createElement("div");
+        baby.appendChild(bottoneBaby);
+        bottoneBaby.innerHTML += "Atleti"
+        bottoneBaby.style.width = "74%";
+        bottoneBaby.style.height = "60px";
+        bottoneBaby.style.backgroundColor = "#000000";
+        bottoneBaby.style.marginTop = "25px";
+        bottoneBaby.style.marginBottom = "10px";
+        bottoneBaby.style.borderRadius = "20px";
+        bottoneBaby.style.display = "flex";
+        bottoneBaby.style.alignItems = "center";
+        bottoneBaby.style.justifyContent = "center";
+        bottoneBaby.style.fontFamily = "'Roboto', sans-serif";
+        bottoneBaby.style.fontSize = "23px";
+        bottoneBaby.style.color = "#ffffff";
 
 
         sezioni.appendChild(ragazzi);
-        ragazzi.style.height = "100px";
+        ragazzi.style.height = "auto";
         ragazzi.style.width = "26%";
-        ragazzi.style.backgroundColor = "green";
+        ragazzi.style.backgroundColor = "#E5E4E4";
         ragazzi.style.marginleft = "5%";
+        ragazzi.style.display = "flex";
+        ragazzi.style.flexDirection = "column";
+        ragazzi.style.padding = "20px";
+        ragazzi.style.borderRadius = "30px";
+        ragazzi.style.alignItems = "center";
+
+        let titoloRagazzi = document.createElement("a");
+        ragazzi.appendChild(titoloRagazzi);
+        titoloRagazzi.innerHTML = "Ragazzi - Allievi";
+        titoloRagazzi.style.fontFamily = "'Roboto', sans-serif";
+        titoloRagazzi.style.fontSize = "200%";
+        titoloRagazzi.style.color = "#051C31";
+        titoloRagazzi.style.marginTop = "15px";
+        titoloRagazzi.style.marginBottom = "25px";
+
+        let scritteRagazzi = document.createElement("a");
+        ragazzi.appendChild(scritteRagazzi);
+        scritteRagazzi.innerHTML = "In queste categorie l'insegnamento tecnico assume un ruolo più rilevante, mirato alla crescita completa dell'atleta nelle varie discipline dello sci alpino. L'impegno richiesto si fa più intenso e la \"passione per lo sci\", accompagnata dalla giusta consapevolezza delle proprie capacità, costituiscono uno stimolo indispensabile per fare quel sacrificio in più spesso necessario per \"non mollare\" e proseguire il cammino verso i traguardi più importanti.";
+        scritteRagazzi.style.lineHeight = "20pt";
+        scritteRagazzi.style.textAlign = "justify";
+        scritteRagazzi.style.fontFamily = "'Roboto', sans-serif";
+        scritteRagazzi.style.fontSize = "17px";
+        scritteRagazzi.style.color = "#051C31";
+
+        let bottoneRagazzi = document.createElement("div");
+        ragazzi.appendChild(bottoneRagazzi);
+        bottoneRagazzi.innerHTML += "Atleti"
+        bottoneRagazzi.style.width = "74%";
+        bottoneRagazzi.style.height = "60px";
+        bottoneRagazzi.style.backgroundColor = "#000000";
+        bottoneRagazzi.style.marginTop = "25px";
+        bottoneRagazzi.style.marginBottom = "10px";
+        bottoneRagazzi.style.borderRadius = "20px";
+        bottoneRagazzi.style.display = "flex";
+        bottoneRagazzi.style.alignItems = "center";
+        bottoneRagazzi.style.justifyContent = "center";
+        bottoneRagazzi.style.fontFamily = "'Roboto', sans-serif";
+        bottoneRagazzi.style.fontSize = "23px";
+        bottoneRagazzi.style.color = "#ffffff";
 
 
         sezioni.appendChild(giovani);
-        giovani.style.height = "100px";
+        giovani.style.height = "auto";
         giovani.style.width = "27%";
-        giovani.style.backgroundColor = "yellow";
+        giovani.style.backgroundColor = "#E5E4E4";
         giovani.style.marginLeft = "5%";
-        
+        giovani.style.marginRight = "5%";
+        giovani.style.display = "flex";
+        giovani.style.flexDirection = "column";
+        giovani.style.padding = "20px";
+        giovani.style.borderRadius = "30px";
+        giovani.style.alignItems = "center";
+
+        let titoloGiovani = document.createElement("a");
+        giovani.appendChild(titoloGiovani);
+        titoloGiovani.innerHTML = "Giovani";
+        titoloGiovani.style.fontFamily = "'Roboto', sans-serif";
+        titoloGiovani.style.fontSize = "200%";
+        titoloGiovani.style.color = "#051C31";
+        titoloGiovani.style.marginTop = "15px";
+        titoloGiovani.style.marginBottom = "25px";
+
+        let scritteGiovani = document.createElement("a");
+        giovani.appendChild(scritteGiovani);
+        scritteGiovani.innerHTML += "Gli Atleti di questa categoria partecipano alle gare del circuito FIS (qui arrivano solo i migliori). Alle capacità tecniche, si uniscono ora eccellenti doti atletiche e soprattutto una adeguata preparazione mentale: serietà e dedizione contraddistinguono questi atleti che, a prescindere dai risultati, vanno comunque ammirati per il loro impegno e la loro passione per uno sport che, anche se un giorno non più a livello agonistico, non smetteranno più di praticare.";
+        scritteGiovani.style.lineHeight = "20pt";
+        scritteGiovani.style.textAlign = "justify";
+        scritteGiovani.style.fontFamily = "'Roboto', sans-serif";
+        scritteGiovani.style.fontSize = "17px";
+        scritteGiovani.style.color = "#051C31";
+
+        let bottoneGiovani = document.createElement("div");
+        giovani.appendChild(bottoneGiovani);
+        bottoneGiovani.innerHTML += "Atleti"
+        bottoneGiovani.style.width = "74%";
+        bottoneGiovani.style.height = "60px";
+        bottoneGiovani.style.backgroundColor = "#000000";
+        bottoneGiovani.style.marginTop = "25px";
+        bottoneGiovani.style.marginBottom = "10px";
+        bottoneGiovani.style.borderRadius = "20px";
+        bottoneGiovani.style.display = "flex";
+        bottoneGiovani.style.alignItems = "center";
+        bottoneGiovani.style.justifyContent = "center";
+        bottoneGiovani.style.fontFamily = "'Roboto', sans-serif";
+        bottoneGiovani.style.fontSize = "23px";
+        bottoneGiovani.style.color = "#ffffff";       
 
         break;
 }
